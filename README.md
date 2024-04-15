@@ -18,34 +18,29 @@
 
 ## プロジェクト構成
 
-```plaintext
-interview-timer-app/
-│
-├── pages/              # Next.js ページコンポーネント
-│   ├── _app.js         # アプリケーションのレイアウトと共通機能
-│   └── index.js        # メインページ
-│
-├── components/         # React コンポーネント
-│   ├── Timer.js
-│   ├── SettingsForm.js
-│   └── Alert.js
-│
-├── styles/             # スタイルシート
-│   ├── Home.module.css
-│   └── Timer.module.css
-│
-├── public/             # 静的ファイルとアセット
-│   └── favicon.ico
-│
-├── package.json        # プロジェクト依存関係とスクリプト
-└── README.md           # プロジェクトの説明と使用方法
-```
+詳細なフォルダとファイル構成は、プロジェクトの `src` ディレクトリを参照してください。
+
+## Docker 環境のセットアップ
+
+本プロジェクトは Docker を使用して環境を容易に構築できるように設計されています。`docker-compose.yml` ファイルには、Next.js アプリケーションと PostgreSQL データベースのサービスが定義されています。
+
+### 使用方法
+
+1. Docker と Docker Compose がインストールされていることを確認してください。
+2. 以下のコマンドを実行してコンテナをビルドし、起動します:
+
+    ```bash
+    docker-compose up
+    ```
+
+3. ブラウザで `http://localhost:3000` にアクセスしてアプリケーションを使用します。
+
+データベースが不要な場合は、`docker-compose.yml` から `db` 関連の設定を削除してください。
 
 ## インストールと実行
-プロジェクトのクローン後、以下のコマンドを実行して依存関係をインストールし、開発サーバーを起動します。
 
-```
+開発環境でのセットアップには、以下の手順を実行してください:
+
+```bash
 npm install
 npm run dev
-```
-ブラウザで http://localhost:3000 にアクセスしてアプリケーションを使用します。
