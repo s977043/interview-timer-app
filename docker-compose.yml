@@ -1,0 +1,23 @@
+version: "3.8" # Docker Compose のバージョンを指定します。
+
+########################################################
+# volumes
+########################################################
+volumes:
+  nextjs-next-store:
+
+services: # この Docker Compose ファイルで作成するサービスを定義します。
+  nextjs: # サービスの名前を指定します。
+    build:
+      context: .
+      dockerfile: ./nextjs/Dockerfile
+    image: interview-timer-nextjs
+    container_name: interview-timer-nextjs
+    volumes:
+      - ./:/usr/app
+      - nextjs-next-store:/usr/app/.next
+    ports:
+      - "3000:3000"
+      - "6006:6006"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
