@@ -1,0 +1,23 @@
+import Head from 'next/head';
+import Timer from '../components/Timer';
+
+export default function Home() {
+  return (
+    <div>
+      <Head>
+        <title>Interview Timer</title>
+        <meta name="description" content="A timer application for interview sessions." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>
+        <h1>Welcome to the Interview Timer</h1>
+        <Timer />
+      </main>
+
+      <footer>
+        <p>© 2024 Interview Timer</p>
+      </footer>
+    </div>
+  );
+}

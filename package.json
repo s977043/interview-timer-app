@@ -1,0 +1,16 @@
+{
+    "name": "interview-timer-app",
+    "version": "1.0.0",
+    "description": "A timer application for managing interview sessions",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "latest",
+        "react": "latest",
+        "react-dom": "latest"
+    }
+}
