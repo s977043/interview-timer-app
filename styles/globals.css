@@ -1,0 +1,76 @@
+/* globals.css */
+
+/* HTML要素のデフォルトマージンとパディングをリセット */
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 全体的なフォントファミリーを設定 */
+body
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #333;
+}
+
+/* ページ全体のレイアウト設定 */
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* 共通リンクスタイル */
+a
+{
+    text-decoration: none;
+
+    color: #0070f3;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* 共通ボタンスタイル */
+button
+{
+    padding: 8px 16px;
+
+    cursor: pointer;
+
+    color: white;
+    border: none;
+    border-radius: 4px;
+    background-color: #0070f3;
+}
+
+button:hover
+{
+    background-color: #0056b3;
+}
+
+/* ユーティリティクラス */
+.hidden
+{
+    display: none;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.bold
+{
+    font-weight: bold;
+}
